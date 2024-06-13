@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #6d62e5;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff8513;
+    color: #000000;
+    text-align: center;
+    padding: 12px;
+   
+    
+}
+
+.responsive-img_1 {
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 30px; /* Här försökte jag centrera 
+    bilden någorlunda eftersom att den inte blir särskilt centrerad i defaultläge. */
+    overflow: hidden; 
+
+}
+
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    margin: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffa;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 10px; 
+}
+
+.button {
+    background-color: #635fe4;
+    color: #fea809;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    height: 40px;
+    width: 140px;
+}
+
+.button:hover {
+    background-color: #777;
+    transform: scale(1.1);
+}
+
+img {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+}
+
+.section {
+    padding: 20px;
+    background-color: #ff9029;
+    margin: 12px 0;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    overflow: hidden; 
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.section1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section1 h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.catGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.catGrid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .section1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 769px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .section1 {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section1 h2 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .catGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
